@@ -8,12 +8,15 @@ export const searchParams  =  {
 }
 
 export function fetchPhoto(params) {
+  const spinner = document.querySelector('.loader')
+  spinner.style.display = "block";
     if (params.q === "") {
         return
     }
   return fetch(
     `https://pixabay.com/api/?${new URLSearchParams(params)}`
   ).then((response) => {
+    spinner.style.display = "none";
     if (!response.ok) {
       throw new Error(response.status);
       }

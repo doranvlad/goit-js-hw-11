@@ -13,6 +13,7 @@ const input = document.querySelector('input[name="search"]')
 const fetchPhotoBtn = document.querySelector('button[type="button"]')
 const photosList = document.querySelector(".gallery");
 
+
 input.addEventListener('input', inputValueFunc);
 
 function inputValueFunc(event) {
@@ -20,6 +21,7 @@ function inputValueFunc(event) {
 }
 
 fetchPhotoBtn.addEventListener("click", () => {
+    
     photosList.innerHTML = "";
   pixabay.fetchPhoto(pixabay.searchParams)
       .then((photos) => {if (photos.hits.length === 0) {
@@ -35,5 +37,4 @@ fetchPhotoBtn.addEventListener("click", () => {
           }}
     )
         .catch((error) => console.log(error))
-    
 });

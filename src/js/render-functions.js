@@ -33,5 +33,4 @@ export function rendrePhoto(photos, list) {
     })
     .join("");
     list.insertAdjacentHTML("beforeend", markup);
-    
 }
