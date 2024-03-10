@@ -31,7 +31,9 @@ fetchPhotoBtn.addEventListener("click", () => {
       else {
           render.rendrePhoto(photos, photosList)
           const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: '250' });
+          input.value = ''
           }}
     )
         .catch((error) => console.log(error))
+    
 });

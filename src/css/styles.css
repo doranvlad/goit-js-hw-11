@@ -36,6 +36,7 @@ body {
 }
 
 .gallery {
+  margin-top: 32px;
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
@@ -77,4 +78,55 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.desrp-actions {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  padding-top: 4px;
+}
+
+.desrp-actions-total {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+#search {
+  width: 272px;
+  height: 40px;
+  border: 1px solid rgba(128, 128, 128, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(128, 128, 128, 1);  
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+#search:hover {
+  border-color: rgba(0, 0, 0, 1);
+}
+
+#search:focus {
+  border-color: rgba(78, 117, 255, 1);
+  outline: none;
+  color: rgba(0, 0, 0, 1);
+}
+
+.btn {
+  width: 75px;
+  height: 42px;
+  background-color: rgba(78, 117, 255, 1);
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background-color: rgba(108, 140, 255, 1);
 }
