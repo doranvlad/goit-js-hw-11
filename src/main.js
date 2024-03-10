@@ -8,11 +8,9 @@ import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 
-
 const input = document.querySelector('input[name="search"]')
 const fetchPhotoBtn = document.querySelector('button[type="button"]')
 const photosList = document.querySelector(".gallery");
-
 
 input.addEventListener('input', inputValueFunc);
 
