@@ -10,7 +10,8 @@ export const searchParams  =  {
 export function fetchPhoto(params) {
   const spinner = document.querySelector('.loader')
   spinner.style.display = "block";
-    if (params.q === "") {
+  if (params.q === "") {
+        spinner.style.display = "none";
         return
     }
   return fetch(
