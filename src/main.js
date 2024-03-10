@@ -23,6 +23,9 @@ function inputValueFunc(event) {
 fetchPhotoBtn.addEventListener("click", () => {
     
     photosList.innerHTML = "";
+    if (input.value === "") {
+        return
+    }
   pixabay.fetchPhoto(pixabay.searchParams)
       .then((photos) => {if (photos.hits.length === 0) {
           iziToast.error({
@@ -37,5 +40,5 @@ fetchPhotoBtn.addEventListener("click", () => {
           input.value = ''
           }}
     )
-        .catch((error) => console.log(error))
+      .catch((error) => { return error })
 });
