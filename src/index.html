@@ -14,15 +14,17 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="wraper-input">
-      <input
-        type="text"
-        name="search"
-        id="search"
-        placeholder="Search images..."
-      />
-      <button type="button" class="btn" data-start>Start</button>
-    </div>
+    <form class="form" autocomplete="off">
+      <div class="wraper-input">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search images..."
+        />
+        <button type="submit" class="btn" data-start>Start</button>
+      </div>
+    </form>
     <span class="loader"></span>
     <div class="container">
       <ul class="gallery"></ul>

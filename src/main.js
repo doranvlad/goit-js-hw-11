@@ -7,10 +7,9 @@ import * as render from "./js/render-functions.js"
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-
 const input = document.querySelector('input[name="search"]')
-const fetchPhotoBtn = document.querySelector('button[type="button"]')
 const photosList = document.querySelector(".gallery");
+const form = document.querySelector('.form')
 
 input.addEventListener('input', inputValueFunc);
 
@@ -18,8 +17,11 @@ function inputValueFunc(event) {
     pixabay.searchParams.q = event.target.value;
 }
 
-fetchPhotoBtn.addEventListener("click", () => {
-    
+form.addEventListener("submit", formSubmit);
+
+function formSubmit(event) {
+    event.preventDefault();
+
     photosList.innerHTML = "";
     if (input.value === "") {
         return
@@ -38,5 +40,8 @@ fetchPhotoBtn.addEventListener("click", () => {
           input.value = ''
           }}
     )
-      .catch((error) => { return error })
-});
+      .catch((error) => { iziToast.error({
+            message: `${error}`,
+            position: 'topRight',
+            }); })
+}
